@@ -5,8 +5,8 @@
   "installCommand": "npm install",
   "outputDirectory": ".",
   "functions": {
-    "api/index.js": {
-      "runtime": "nodejs20.x"
+    "sse.js": {
+      "maxDuration": 60
     }
   }
 }
