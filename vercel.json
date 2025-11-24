@@ -1,12 +1,20 @@
 {
   "version": 2,
-  "framework": null,
-  "buildCommand": "npm install && npm run build",
-  "installCommand": "npm install",
-  "outputDirectory": ".",
-  "functions": {
-    "sse.js": {
-      "maxDuration": 60
+  "s": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node"
     }
-  }
+  ],
+  "routes": [
+    {
+      "src": "/sse",
+      "dest": "dist/sse.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/(.*)",
+      "status": 404
+    }
+  ]
 }
